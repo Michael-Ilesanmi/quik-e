@@ -5,8 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <title>Home | Quik-E</title>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <div class="header container" id="header">
+        <div id="close-nav" onclick="closeResponsiveNav()">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="logo"><img src="img/logo.svg" alt="" /></div>
+        <div class="hamburger" id="hamburger" onclick="reponsiveNav()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="responsive-nav" id="responsive-nav">
+          <ul>
+            <li><a href="#">PLANS</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="top-nav">
+          <ul>
+            <li><a href="#">PLANS</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-section container">
+        <div class="left">
+          <h1>Easy <br />Shipping</h1>
+          <p>Competitive Pricing</p>
+          <button>LEARN MORE</button>
+        </div>
+        <div class="right">
+          <div class="circle"><img src="img/plane.png" alt="" /></div>
+        </div>
+      </div>
+      <div class="footer">
+        Copyright &copy; 2021. Designed by
+        <a href="https://github.com/ioluwamichael">Ilesanmi Michael</a>.
+      </div>
+    </div>
+    <script>
+      var header = document.getElementById("header");
+      var hamburger = document.getElementById("hamburger");
+      var navLinks = document.getElementById("responsive-nav");
+      var closeNav = document.getElementById("close-nav");
+      function reponsiveNav() {
+        hamburger.style.display = "none";
+        navLinks.style.display = "flex";
+        header.style.flexDirection = "column";
+        closeNav.style.display = "block";
+      }
+      function closeResponsiveNav() {
+        hamburger.style.display = "block";
+        navLinks.style.display = "none";
+        header.style.flexDirection = "row";
+        closeNav.style.display = "none";
+      }
+    </script>
+  </body>
 </html>
