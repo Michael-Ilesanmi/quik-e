@@ -16,6 +16,8 @@ body,
 html {
   width: 100%;
   height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 .container {
@@ -67,6 +69,12 @@ html {
   margin-left: 50px;
   font-size: 0.8rem;
   font-weight: 600;
+  transition: 300ms ease-in-out;
+}
+
+.top-nav li:hover {
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: #f2f2f286;
 }
 
 .main-section {
@@ -100,10 +108,12 @@ html {
   font-size: 1.1rem;
   margin-top: 40px;
   cursor: pointer;
+  transition: 500ms ease-in;
 }
 
 .left button:hover {
-  border: 2px #169bd5 solid;
+  outline: 4px #169bd5 solid;
+  outline-offset: 2px;
 }
 
 .right {
@@ -118,8 +128,6 @@ html {
   height: 320px;
   position: relative;
   margin: auto;
-  transform: translateY(-50%);
-  top: 50%;
 }
 
 .right .circle img {
@@ -139,7 +147,16 @@ html {
   padding: 10px 0;
   font-size: 0.8rem;
 }
+#rightContainer {
+  perspective: 25px;
+}
 
+#inner {
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
 @media screen and (max-width: 768px) {
   .header {
     padding: 25px 50px 20px;

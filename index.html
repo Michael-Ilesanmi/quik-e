@@ -23,6 +23,7 @@
         <div class="hamburger" id="hamburger" onclick="reponsiveNav()">
           <i class="fas fa-bars"></i>
         </div>
+        <!-- Mobile Screen Nav -->
         <div class="responsive-nav" id="responsive-nav">
           <ul>
             <li><a href="#">PLANS</a></li>
@@ -30,6 +31,8 @@
             <li><a href="#">CONTACT</a></li>
           </ul>
         </div>
+
+        <!-- Large Screen Nav Bar -->
         <div class="top-nav">
           <ul>
             <li><a href="#">PLANS</a></li>
@@ -38,16 +41,25 @@
           </ul>
         </div>
       </div>
+      <!-- Main Section -->
       <div class="main-section">
+        <!-- Left Section Containing Text -->
         <div class="left">
           <h1>Easy <br />Shipping</h1>
           <p>Competitive Pricing</p>
           <button>LEARN MORE</button>
         </div>
+        <!-- Right Section Containing Plane -->
         <div class="right">
-          <div class="circle"><img src="img/plane.png" alt="" /></div>
+          <div class="right" id="rightContainer">
+            <div class="circle" id="inner">
+              <img src="img/plane.png" alt="" />
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Footer Section -->
       <div class="footer">
         Copyright &copy; 2021. Designed by
         <a href="https://github.com/ioluwamichael">Ilesanmi Michael</a>.
@@ -71,5 +83,6 @@
         closeNav.style.display = "none";
       }
     </script>
+    <script src="app.js"></script>
   </body>
 </html>
